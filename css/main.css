@@ -102,6 +102,10 @@ Mobile - Text Style
         font-size: 2em;
         margin-top: 10px;
     }
+
+    p {
+        font-size: .9em;
+    }
 }
 
 /*===============================================================

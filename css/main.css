@@ -138,6 +138,16 @@ AirBnB Button Style
     background-color: #ebebeb;
 }
 
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
 /*===============================================================
 Mobile - AirBnB Button Style
 ===============================================================*/

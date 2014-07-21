@@ -38,7 +38,6 @@
 
      ga('create', 'UA-52640062-1', 'auto');
      ga('send', 'pageview');
-     ga('send', 'event', 'button', 'click');
     </script>
 
 </head>
@@ -62,15 +61,15 @@
                         <h2>A luxury bed & breakfast experience in the heart of Kerikeri.</h2>
                         
                         <!-- Main AirBnB Button -->
-                        <button class="btn btn-default btn-lg hidden-xs main-btn" id="button">
-                            <a href="https://www.airbnb.co.nz/rooms/361920" onClick="trackMe()" target="_blank">Book your stay with us <span style="text-decoration:underline">now</span> on AirBnB</a>
-                        </button>
+                        <div class="btn btn-default btn-lg hidden-xs" id="main-btn">
+                            <a href="https://www.airbnb.co.nz/rooms/361920" onClick="trackMe('desktop-button')" target="_blank">Book your stay with us <span style="text-decoration:underline">now</span> on AirBnB</a>
+                        </div>
                         <!-- AirBnB Button ENDS -->
 
                         <!-- Mobile AirBnB Button -->
-                        <button class="btn btn-default btn-lg visible-xs-block mobile-btn" id="button">
-                            <a href="https://www.airbnb.co.nz/rooms/361920" target="_blank">Book <span style="text-decoration:underline">now</span> on AirBnB</a>
-                        </button>
+                        <div class="btn btn-default btn-lg visible-xs-block" id="mobile-btn">
+                            <a href="https://www.airbnb.co.nz/rooms/361920" onClick="trackMe('mobile-button')" target="_blank">Book <span style="text-decoration:underline">now</span> on AirBnB</a>
+                        </div>
                         <!-- AirBnB Button ENDS -->
                     </div>
                 </div> 
@@ -90,11 +89,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript">
 
-        var trackMe = function(){
+        var trackMe = function(label){
 
-        $('#button').on('click', function() {
-        ga('send', 'event', 'button', 'click');
-        });
+            ga('send', 'event', 'button', 'click', label);
 
         };
 

@@ -162,7 +162,7 @@ Mobile - AirBnB Button Style
     text-decoration: none;
     }
 
-    .mobile-btn {
+    #mobile-btn {
         width: 100%;
         margin: auto;
         margin-top: 15px;

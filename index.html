@@ -38,6 +38,7 @@
 
      ga('create', 'UA-52640062-1', 'auto');
      ga('send', 'pageview');
+     ga('send', 'event', 'button', 'click');
     </script>
 
 </head>
@@ -61,15 +62,15 @@
                         <h2>A luxury bed & breakfast experience in the heart of Kerikeri.</h2>
                         
                         <!-- Main AirBnB Button -->
-                        <div class="btn btn-default btn-lg hidden-xs" id="main-btn">
-                            <a href="https://www.airbnb.co.nz/rooms/361920" target="_blank">Book your stay with us <span style="text-decoration:underline">now</span> on AirBnB</a>
-                        </div>
+                        <button class="btn btn-default btn-lg hidden-xs main-btn" id="button">
+                            <a href="https://www.airbnb.co.nz/rooms/361920" onClick="trackMe()" target="_blank">Book your stay with us <span style="text-decoration:underline">now</span> on AirBnB</a>
+                        </button>
                         <!-- AirBnB Button ENDS -->
 
                         <!-- Mobile AirBnB Button -->
-                        <div class="btn btn-default btn-lg visible-xs-block" id="mobile-btn">
+                        <button class="btn btn-default btn-lg visible-xs-block mobile-btn" id="button">
                             <a href="https://www.airbnb.co.nz/rooms/361920" target="_blank">Book <span style="text-decoration:underline">now</span> on AirBnB</a>
-                        </div>
+                        </button>
                         <!-- AirBnB Button ENDS -->
                     </div>
                 </div> 
@@ -84,6 +85,20 @@
             <!-- Footer Note ENDS -->
         </div>
     </section>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        var trackMe = function(){
+
+        $('#button').on('click', function() {
+        ga('send', 'event', 'button', 'click');
+        });
+
+        };
+
+    </script>
 
 </body>
 
